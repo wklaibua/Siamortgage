@@ -2110,6 +2110,155 @@ body {
 }
 
 
+
+  /* ══════════════════════════════════════
+     BLOG PAGE
+  ══════════════════════════════════════ */
+  .blog-filter-bar {
+    background: var(--off-white);
+    padding: 16px 72px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border-gold);
+    align-items: center;
+  }
+  .blog-filter-btn {
+    padding: 6px 16px;
+    border: 1px solid var(--border-gold);
+    background: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.2s;
+  }
+  .blog-filter-btn:hover,
+  .blog-filter-btn.active { background: var(--navy); color: var(--warm-white); border-color: var(--navy); }
+  .blog-search {
+    margin-left: auto;
+    padding: 6px 16px;
+    border: 1px solid var(--border-gold);
+    background: var(--warm-white);
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    color: var(--navy);
+    outline: none;
+    width: 220px;
+  }
+  .blog-search:focus { border-color: var(--gold); }
+
+  .blog-body { padding: 64px 72px; }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 64px;
+  }
+
+  .blog-card {
+    border: 1px solid var(--border-gold);
+    background: var(--warm-white);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .blog-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13,30,61,0.1); }
+
+  .blog-card-header {
+    height: 140px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .blog-card-cat-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+  }
+  .badge-tips { background: rgba(196,151,58,0.9); color: var(--navy); }
+  .badge-market { background: rgba(250,248,245,0.15); color: var(--gold); border: 1px solid var(--gold); }
+  .badge-firsttime { background: rgba(250,248,245,0.9); color: var(--navy); }
+  .blog-card-icon { font-size: 36px; opacity: 0.25; }
+
+  .blog-card-body { padding: 24px; background: var(--off-white); }
+  .blog-card-date { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .blog-card-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 19px; color: var(--navy); line-height: 1.25; margin-bottom: 10px; }
+  .blog-card-excerpt { font-size: 13px; line-height: 1.75; color: var(--text-muted); margin-bottom: 14px; }
+  .blog-card-read { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+
+  /* Single post */
+  .blog-single { max-width: 760px; margin: 0 auto; padding: 64px 72px; }
+  .blog-back { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); cursor: pointer; margin-bottom: 36px; transition: color 0.2s; border: none; background: none; }
+  .blog-back:hover { color: var(--gold); }
+  .blog-single-cat { display: inline-block; padding: 4px 12px; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 18px; font-family: 'Lato', sans-serif; }
+  .blog-single-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(30px, 4vw, 48px); color: var(--navy); line-height: 1.1; margin-bottom: 18px; }
+  .blog-single-meta { font-size: 11px; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border-gold); }
+  .blog-single-content { font-size: 15px; line-height: 1.95; color: var(--text-body); }
+  .blog-single-content h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 26px; color: var(--navy); margin: 36px 0 14px; }
+  .blog-single-content h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 21px; color: var(--navy); margin: 28px 0 10px; }
+  .blog-single-content p { margin-bottom: 20px; }
+  .blog-single-content ul, .blog-single-content ol { margin: 0 0 20px 24px; }
+  .blog-single-content li { margin-bottom: 8px; line-height: 1.8; }
+  .blog-single-content strong { font-weight: 700; color: var(--navy); }
+
+  /* Blog CTA */
+  .blog-cta { background: var(--navy); padding: 40px 48px; margin-top: 56px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .blog-cta-text h4 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 24px; color: var(--warm-white); margin-bottom: 6px; }
+  .blog-cta-text p { font-size: 13px; color: rgba(250,248,245,0.6); }
+  .blog-cta-btn { padding: 13px 28px; border: 1px solid var(--gold); color: var(--gold); font-family: 'Lato', sans-serif; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; background: none; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+  .blog-cta-btn:hover { background: var(--gold); color: var(--navy); }
+
+  /* Admin */
+  .blog-admin-panel { background: var(--off-white); border: 1px solid var(--border-gold); padding: 40px; margin-bottom: 36px; }
+  .blog-admin-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 24px; color: var(--navy); margin-bottom: 24px; }
+  .blog-field-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; display: block; }
+  .blog-field-input, .blog-field-select, .blog-field-textarea {
+    width: 100%; padding: 11px 14px; border: 1px solid var(--border-gold);
+    background: var(--warm-white); font-family: 'Lato', sans-serif; font-size: 14px;
+    color: var(--navy); outline: none; transition: border-color 0.2s; margin-bottom: 16px;
+  }
+  .blog-field-input:focus, .blog-field-select:focus, .blog-field-textarea:focus { border-color: var(--gold); }
+  .blog-field-textarea { min-height: 260px; resize: vertical; line-height: 1.7; }
+  .blog-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .blog-admin-actions { display: flex; gap: 12px; align-items: center; margin-top: 8px; }
+  .blog-btn-publish { padding: 12px 28px; background: var(--navy); color: var(--warm-white); border: 1px solid var(--navy); font-family: 'Lato', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
+  .blog-btn-publish:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+  .blog-btn-publish:disabled { opacity: 0.5; cursor: not-allowed; }
+  .blog-btn-ai { padding: 12px 22px; background: none; color: var(--gold); border: 1px solid var(--gold); font-family: 'Lato', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
+  .blog-btn-ai:hover { background: var(--gold); color: var(--navy); }
+  .blog-btn-ai:disabled { opacity: 0.5; cursor: not-allowed; }
+  .blog-status { font-size: 12px; color: var(--text-muted); font-style: italic; }
+  .blog-post-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .blog-post-table th { text-align: left; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); padding: 10px 12px; border-bottom: 1px solid var(--border-gold); }
+  .blog-post-table td { padding: 12px; border-bottom: 1px solid rgba(196,151,58,0.1); font-size: 13px; vertical-align: middle; }
+  .blog-btn-del { padding: 4px 10px; border: 1px solid rgba(192,57,43,0.4); color: #c0392b; background: none; font-size: 10px; cursor: pointer; font-family: 'Lato', sans-serif; }
+  .blog-btn-del:hover { background: #c0392b; color: white; }
+  .blog-login-box { max-width: 380px; margin: 60px auto; background: var(--off-white); border: 1px solid var(--border-gold); padding: 40px; }
+  .blog-empty { text-align: center; padding: 80px 24px; color: var(--text-muted); }
+  .blog-empty h3 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 28px; color: var(--navy); margin-bottom: 12px; }
+
+  @media (max-width: 768px) {
+    .blog-filter-bar { padding: 12px 20px; }
+    .blog-search { width: 100%; margin-left: 0; margin-top: 8px; }
+    .blog-body { padding: 36px 24px; }
+    .blog-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .blog-single { padding: 36px 24px; }
+    .blog-cta { flex-direction: column; padding: 32px 24px; }
+    .blog-form-row { grid-template-columns: 1fr; }
+  }
+
 </style>
 </head>
 <body>
@@ -2134,6 +2283,7 @@ body {
   <a class="tab-nav-item" id="tab-premium" onclick="showPage('premium')">Premium &amp; Exclusive</a>
   <a class="tab-nav-item" id="tab-consult" onclick="showPage('consult')">Consultation</a>
   <a class="tab-nav-item" id="tab-resources" onclick="showPage('resources')">Resources</a>
+  <a class="tab-nav-item" id="tab-blog" onclick="showPage('blog')">Blog</a>
   <a class="tab-nav-apply" id="tab-apply" onclick="showPage('apply')">Apply Now</a>
 </nav>
 
@@ -2723,7 +2873,7 @@ body {
 </div>
 
 <script>
-const pages = ['hero','about','states','pathways','premium','consult','apply','resources'];
+const pages = ['hero','about','states','pathways','premium','consult','apply','resources','blog'];
 
 function showPage(id) {
   pages.forEach(p => {
@@ -2861,6 +3011,264 @@ function goToSlide(n){
   _stimer=setInterval(function(){goToSlide((_cur+1)%_total);},5500);
 }
 window.addEventListener('load',initSlideshow);
+
+
+// ════════════════════════════════
+// BLOG SYSTEM
+// ════════════════════════════════
+var blogPosts = [];
+var blogFilter = 'all';
+var blogSearch = '';
+var blogView = 'list'; // list | single | admin | login
+var blogCurrentPost = null;
+var blogAdminLoggedIn = false;
+var blogDb = null;
+var blogSample = null;
+var BLOG_PASS = 'Sia2025!';
+
+async function initBlog() {
+  try {
+    blogDb = await claude.use('db');
+    blogSample = await claude.use('sample');
+    await loadBlogPosts();
+  } catch(e) {}
+  renderBlog();
+}
+
+async function loadBlogPosts() {
+  if (!blogDb) return;
+  try {
+    var snap = await blogDb.collection('blog_posts').orderBy('createdAt','desc').limit(50).get();
+    blogPosts = snap.docs.map(function(d){ return Object.assign({id:d.id}, d.data()); });
+  } catch(e) { blogPosts = []; }
+}
+
+function setBlogFilter(f, btn) {
+  blogFilter = f;
+  document.querySelectorAll('.blog-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  if(btn) btn.classList.add('active');
+  if(blogView === 'list') renderBlog();
+}
+
+function setBlogSearch(q) {
+  blogSearch = q;
+  if(blogView === 'list') renderBlog();
+}
+
+function renderBlog() {
+  var app = document.getElementById('blogApp');
+  if(!app) return;
+  if(blogView === 'single') { renderBlogSingle(); return; }
+  if(blogView === 'admin') { renderBlogAdmin(); return; }
+  if(blogView === 'login') { renderBlogLogin(); return; }
+  renderBlogList();
+}
+
+function renderBlogList() {
+  var app = document.getElementById('blogApp');
+  var filtered = blogPosts.filter(function(p){
+    var matchCat = blogFilter === 'all' || p.category === blogFilter;
+    var matchQ = !blogSearch || p.title.toLowerCase().includes(blogSearch.toLowerCase()) || (p.excerpt||'').toLowerCase().includes(blogSearch.toLowerCase());
+    return matchCat && matchQ;
+  });
+  if(filtered.length === 0){
+    app.innerHTML = '<div class="blog-empty"><h3>' + (blogPosts.length === 0 ? 'No posts yet.' : 'No posts match your search.') + '</h3><p>New mortgage insights are published daily.</p></div>';
+    return;
+  }
+  var cards = filtered.map(function(p){ return blogCard(p); }).join('');
+  app.innerHTML = '<div class="blog-grid">' + cards + '</div>';
+}
+
+function blogCard(p) {
+  var icons = {tips:'💡',market:'📈',firsttime:'🏠'};
+  var catLabel = {tips:'Mortgage Tips',market:'Market Update',firsttime:'First-Time Buyers'};
+  var catClass = {tips:'badge-tips',market:'badge-market',firsttime:'badge-firsttime'};
+  var date = p.createdAt ? new Date(p.createdAt).toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}) : '';
+  return '<div class="blog-card" onclick="openBlogPost('' + p.id + '')">' +
+    '<div class="blog-card-header">' +
+    '<span class="blog-card-cat-badge ' + (catClass[p.category]||'badge-tips') + '">' + (catLabel[p.category]||'Mortgage Tips') + '</span>' +
+    '<div class="blog-card-icon">' + (icons[p.category]||'💡') + '</div>' +
+    '</div>' +
+    '<div class="blog-card-body">' +
+    '<div class="blog-card-date">' + date + '</div>' +
+    '<h3 class="blog-card-title">' + esc(p.title) + '</h3>' +
+    '<p class="blog-card-excerpt">' + esc(p.excerpt||'') + '</p>' +
+    '<div class="blog-card-read">Read Article →</div>' +
+    '</div></div>';
+}
+
+function openBlogPost(id) {
+  blogCurrentPost = blogPosts.find(function(p){ return p.id === id; });
+  if(!blogCurrentPost) return;
+  blogView = 'single';
+  document.getElementById('blogFilterBar').style.display = 'none';
+  renderBlog();
+}
+
+function renderBlogSingle() {
+  var p = blogCurrentPost;
+  var catLabel = {tips:'Mortgage Tips',market:'Market Update',firsttime:'First-Time Buyers'};
+  var catClass = {tips:'badge-tips',market:'badge-market',firsttime:'badge-firsttime'};
+  var date = p.createdAt ? new Date(p.createdAt).toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}) : '';
+  var app = document.getElementById('blogApp');
+  app.innerHTML = '<div class="blog-single">' +
+    '<button class="blog-back" onclick="closeBlogPost()">← Back to all posts</button>' +
+    '<span class="blog-single-cat ' + (catClass[p.category]||'badge-tips') + '">' + (catLabel[p.category]||'Mortgage Tips') + '</span>' +
+    '<h1 class="blog-single-title">' + esc(p.title) + '</h1>' +
+    '<div class="blog-single-meta">By Sia Klaibua, Mortgage Loan Originator · ' + date + ' · Sunflower Bank · NMLS# 2823225</div>' +
+    '<div class="blog-single-content">' + (p.content||'') + '</div>' +
+    '<div class="blog-cta">' +
+    '<div class="blog-cta-text"><h4>Ready to take the next step?</h4><p>I am here to help you navigate your mortgage journey with clarity and confidence.</p></div>' +
+    '<button class="blog-cta-btn" onclick="window.open('https://mortgageapp.sunflowerbank.com/homehub/signup/sia.klaibua@sunflowerbank.com?from_mobile_share=true','_blank')">Start My Application →</button>' +
+    '</div></div>';
+}
+
+function closeBlogPost() {
+  blogView = 'list';
+  blogCurrentPost = null;
+  document.getElementById('blogFilterBar').style.display = '';
+  renderBlog();
+}
+
+function showBlogAdmin() {
+  if(blogAdminLoggedIn){ blogView = 'admin'; renderBlog(); return; }
+  blogView = 'login'; renderBlog();
+}
+
+function renderBlogLogin() {
+  var app = document.getElementById('blogApp');
+  app.innerHTML = '<div class="blog-login-box">' +
+    '<div style="font-family:Cormorant Garamond,serif;font-size:26px;color:var(--navy);margin-bottom:8px;">Admin Access</div>' +
+    '<div style="font-size:12px;color:var(--text-muted);margin-bottom:20px;">Enter your password to manage blog posts.</div>' +
+    '<label class="blog-field-label">Password</label>' +
+    '<input class="blog-field-input" type="password" id="blogPwd" placeholder="••••••••" onkeydown="if(event.key==='Enter')checkBlogLogin()">' +
+    '<div style="color:#c0392b;font-size:12px;margin-top:4px;" id="blogLoginErr"></div>' +
+    '<br>' +
+    '<button class="blog-btn-publish" onclick="checkBlogLogin()">Log In</button>' +
+    ' <button class="blog-filter-btn" onclick="closeBlogPost()" style="padding:12px 20px;">Cancel</button>' +
+    '</div>';
+  setTimeout(function(){ var el=document.getElementById('blogPwd'); if(el) el.focus(); },100);
+}
+
+function checkBlogLogin() {
+  var pwd = document.getElementById('blogPwd');
+  if(pwd && pwd.value === BLOG_PASS){
+    blogAdminLoggedIn = true;
+    blogView = 'admin';
+    renderBlog();
+  } else {
+    var err = document.getElementById('blogLoginErr');
+    if(err) err.textContent = 'Incorrect password. Please try again.';
+  }
+}
+
+function renderBlogAdmin() {
+  var app = document.getElementById('blogApp');
+  var rows = blogPosts.map(function(p){
+    var date = p.createdAt ? new Date(p.createdAt).toLocaleDateString() : '';
+    var cats = {tips:'Tips',market:'Market',firsttime:'First-Time'};
+    return '<tr><td>' + esc(p.title) + '</td><td>' + (cats[p.category]||p.category) + '</td><td>' + date + '</td>' +
+      '<td><button class="blog-btn-del" onclick="deleteBlogPost('' + p.id + '')">Delete</button></td></tr>';
+  }).join('');
+
+  app.innerHTML = '<div class="blog-admin-panel">' +
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">' +
+    '<div class="blog-admin-title">Write a New Post</div>' +
+    '<button class="blog-filter-btn" onclick="closeBlogPost()" style="padding:10px 18px;">View Blog</button></div>' +
+    '<div class="blog-form-row">' +
+    '<div><label class="blog-field-label">Post Title</label><input class="blog-field-input" id="bTitle" placeholder="e.g. 5 Things First-Time Buyers Should Know"></div>' +
+    '<div><label class="blog-field-label">Category</label><select class="blog-field-select" id="bCat"><option value="tips">Mortgage Tips</option><option value="market">Market Update</option><option value="firsttime">First-Time Buyers</option></select></div>' +
+    '</div>' +
+    '<label class="blog-field-label">Short Excerpt</label>' +
+    '<input class="blog-field-input" id="bExcerpt" placeholder="A 1-2 sentence summary...">' +
+    '<label class="blog-field-label">Post Content (HTML supported)</label>' +
+    '<textarea class="blog-field-textarea" id="bContent" placeholder="Write your post or click Generate with AI..."></textarea>' +
+    '<div class="blog-admin-actions">' +
+    '<button class="blog-btn-publish" id="bPublishBtn" onclick="publishBlogPost()">Publish Post</button>' +
+    '<button class="blog-btn-ai" id="bAiBtn" onclick="generateBlogPost()">✦ Generate with AI</button>' +
+    '<span class="blog-status" id="bStatus"></span>' +
+    '</div></div>' +
+    (blogPosts.length > 0 ? '<div class="blog-admin-panel"><div class="blog-admin-title">Published Posts (' + blogPosts.length + ')</div>' +
+    '<table class="blog-post-table"><thead><tr><th>Title</th><th>Category</th><th>Date</th><th>Action</th></tr></thead><tbody>' + rows + '</tbody></table></div>' : '');
+}
+
+async function publishBlogPost() {
+  var title = (document.getElementById('bTitle')||{}).value||'';
+  var cat = (document.getElementById('bCat')||{}).value||'tips';
+  var excerpt = (document.getElementById('bExcerpt')||{}).value||'';
+  var content = (document.getElementById('bContent')||{}).value||'';
+  if(!title.trim()||!excerpt.trim()||!content.trim()){ setBlogStatus('Please fill in all fields.'); return; }
+  var btn = document.getElementById('bPublishBtn');
+  if(btn) btn.disabled = true;
+  setBlogStatus('Publishing...');
+  try {
+    var id = 'post_' + Date.now();
+    await blogDb.collection('blog_posts').doc(id).set({
+      title:title.trim(), category:cat, excerpt:excerpt.trim(), content:content.trim(),
+      createdAt:Date.now(), author:'Sia Klaibua'
+    });
+    await loadBlogPosts();
+    setBlogStatus('Post published!');
+    setTimeout(function(){ renderBlogAdmin(); }, 1000);
+  } catch(e) { setBlogStatus('Error: ' + e.message); if(btn) btn.disabled=false; }
+}
+
+async function generateBlogPost() {
+  var title = (document.getElementById('bTitle')||{}).value||'';
+  var cat = (document.getElementById('bCat')||{}).value||'tips';
+  if(!title.trim()){ setBlogStatus('Please enter a title first.'); return; }
+  var aibtn = document.getElementById('bAiBtn');
+  if(aibtn) aibtn.disabled = true;
+  setBlogStatus('Generating with AI...');
+  var catNames = {tips:'Mortgage Tips',market:'Market Update',firsttime:'First-Time Buyer Guide'};
+  try {
+    var result = await blogSample(
+      'You are Sia Klaibua, Mortgage Loan Originator at Sunflower Bank, Scottsdale AZ, NMLS# 2823225, licensed in 43 states. Write a professional warm blog post for siamortgage.com.' +
+      '
+Category: ' + catNames[cat] + '
+Title: ' + title +
+      '
+Requirements: first person as Sia, warm professional tone, 400-600 words, HTML formatting using <h2> <p> <ul><li> <strong>, do not use contractions, end with invitation to contact Sia, do not include the title, return ONLY the HTML content.',
+      { modelTier:'default', onText:function(t){ setBlogStatus('Writing... ' + t.text.length + ' chars'); } }
+    );
+    var ta = document.getElementById('bContent');
+    if(ta) ta.value = result.text;
+    var excResult = await blogSample('Write a 1-2 sentence excerpt max 150 chars for a blog post titled "'+title+'". Return only the text:
+
+'+result.text.substring(0,400), {modelTier:'quick'});
+    var ex = document.getElementById('bExcerpt');
+    if(ex) ex.value = excResult.text.trim();
+    setBlogStatus('Generated! Review and publish.');
+  } catch(e) { setBlogStatus('Error: ' + e.message); }
+  if(aibtn) aibtn.disabled = false;
+}
+
+async function deleteBlogPost(id) {
+  if(!confirm('Delete this post?')) return;
+  try {
+    await blogDb.collection('blog_posts').doc(id).delete();
+    await loadBlogPosts();
+    renderBlogAdmin();
+  } catch(e) { alert('Error: ' + e.message); }
+}
+
+function setBlogStatus(msg) {
+  var el = document.getElementById('bStatus');
+  if(el) el.textContent = msg;
+}
+
+function esc(str) {
+  return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Init blog when tab is clicked
+var _origShowPage = showPage;
+showPage = function(id) {
+  _origShowPage(id);
+  if(id === 'blog') {
+    initBlog();
+  }
+};
 
 </script>
 
@@ -3208,6 +3616,32 @@ window.addEventListener('load',initSlideshow);
     </div>
 
   </div><!-- end resources-body -->
+
+  <footer class="site-footer">
+    <div class="footer-brand">Sia Klaibua · Sunflower Bank</div>
+    <div class="footer-legal">NMLS #2823225 · Equal Housing Lender · Scottsdale, AZ<br>Sunflower Bank NMLS #709491 · Member FDIC<br>© 2025 Sia Klaibua. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════
+     BLOG
+══════════════════════════════════ -->
+<div id="page-blog" class="page page-section">
+
+  <!-- Filter bar -->
+  <div class="blog-filter-bar" id="blogFilterBar">
+    <button class="blog-filter-btn active" onclick="setBlogFilter('all',this)">All Posts</button>
+    <button class="blog-filter-btn" onclick="setBlogFilter('tips',this)">Mortgage Tips</button>
+    <button class="blog-filter-btn" onclick="setBlogFilter('market',this)">Market Updates</button>
+    <button class="blog-filter-btn" onclick="setBlogFilter('firsttime',this)">First-Time Buyers</button>
+    <button class="blog-filter-btn" onclick="showBlogAdmin()" id="blogAdminBtn" style="margin-left:auto;">Admin</button>
+    <input class="blog-search" type="text" placeholder="Search posts..." oninput="setBlogSearch(this.value)" id="blogSearch">
+  </div>
+
+  <div id="blogApp" class="blog-body">
+    <div class="blog-empty"><h3>Loading posts...</h3></div>
+  </div>
 
   <footer class="site-footer">
     <div class="footer-brand">Sia Klaibua · Sunflower Bank</div>
