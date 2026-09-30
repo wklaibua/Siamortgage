@@ -2058,6 +2058,13 @@ body {
   .lifestyle-photo-sub{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;}
   @media(max-width:768px){.lifestyle-strip{padding:48px 24px 56px;}.lifestyle-grid{grid-template-columns:1fr;gap:16px;}.lifestyle-photo{height:220px;}}
 
+
+  /* Hide Netlify badge */
+  [data-netlify-badge],
+  a[href*='netlify.com'][target='_blank'] img,
+  .netlify-badge,
+  #netlify-badge { display: none !important; visibility: hidden !important; opacity: 0 !important; }
+
 </style>
 </head>
 <body>
@@ -2082,7 +2089,7 @@ body {
   <a class="tab-nav-item" id="tab-premium" onclick="showPage('premium')">Premium &amp; Exclusive</a>
   <a class="tab-nav-item" id="tab-consult" onclick="showPage('consult')">Consultation</a>
   <a class="tab-nav-item" id="tab-resources" onclick="showPage('resources')">Resources</a>
-  <a class="tab-nav-apply" id="tab-apply" onclick="showPage('apply')">Apply Now</a>
+  <a class="tab-nav-apply" id="tab-apply" onclick="window.open('https://mortgageapp.sunflowerbank.com/homehub/signup/sia.klaibua@sunflowerbank.com?from_mobile_share=true','_blank')">Apply Now</a>
 </nav>
 
 <!-- ══════════════════════════════════
