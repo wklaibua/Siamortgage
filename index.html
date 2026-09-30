@@ -2065,6 +2065,70 @@ body {
   .netlify-badge,
   #netlify-badge { display: none !important; visibility: hidden !important; opacity: 0 !important; }
 
+
+  .ins-filter-bar { background: #F2EFE9; padding: 16px 72px; display: flex; gap: 10px; flex-wrap: wrap; border-bottom: 1px solid rgba(196,151,58,0.25); align-items: center; }
+  .ins-filter-btn { padding: 6px 16px; border: 1px solid rgba(196,151,58,0.25); background: none; font-family: 'Lato', sans-serif; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; color: #7A7060; transition: all 0.2s; }
+  .ins-filter-btn:hover, .ins-filter-btn.active { background: #0D1B2E; color: #FAF8F5; border-color: #0D1B2E; }
+  .ins-search { margin-left: auto; padding: 6px 16px; border: 1px solid rgba(196,151,58,0.25); background: #FAF8F5; font-family: 'Lato', sans-serif; font-size: 13px; color: #0D1B2E; outline: none; width: 220px; }
+  .ins-search:focus { border-color: #C4973A; }
+  .ins-body { padding: 64px 72px; }
+  .ins-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .ins-card { border: 1px solid rgba(196,151,58,0.25); background: #FAF8F5; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
+  .ins-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13,30,61,0.1); }
+  .ins-card-top { height: 140px; background: #0D1B2E; display: flex; align-items: center; justify-content: center; position: relative; }
+  .ins-badge { padding: 4px 10px; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; font-family: 'Lato', sans-serif; position: absolute; top: 12px; left: 12px; }
+  .ins-badge-tips { background: rgba(196,151,58,0.9); color: #0D1B2E; }
+  .ins-badge-market { background: rgba(250,248,245,0.15); color: #C4973A; border: 1px solid #C4973A; }
+  .ins-badge-firsttime { background: rgba(250,248,245,0.9); color: #0D1B2E; }
+  .ins-card-icon { font-size: 36px; opacity: 0.2; }
+  .ins-card-body { padding: 24px; background: #F2EFE9; }
+  .ins-card-date { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #7A7060; margin-bottom: 8px; }
+  .ins-card-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 19px; color: #0D1B2E; line-height: 1.25; margin-bottom: 10px; }
+  .ins-card-excerpt { font-size: 13px; line-height: 1.75; color: #7A7060; margin-bottom: 14px; }
+  .ins-card-read { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #C4973A; }
+  .ins-empty { text-align: center; padding: 80px 24px; color: #7A7060; }
+  .ins-empty h3 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 28px; color: #0D1B2E; margin-bottom: 12px; }
+  .ins-empty p { font-size: 14px; line-height: 1.8; }
+  .ins-single { max-width: 760px; margin: 0 auto; padding: 64px 72px; }
+  .ins-back { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #7A7060; cursor: pointer; margin-bottom: 36px; transition: color 0.2s; border: none; background: none; font-family: 'Lato', sans-serif; }
+  .ins-back:hover { color: #C4973A; }
+  .ins-single-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; color: #0D1B2E; line-height: 1.1; margin-bottom: 18px; }
+  .ins-single-meta { font-size: 11px; letter-spacing: 0.1em; color: #7A7060; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(196,151,58,0.25); }
+  .ins-single-body { font-size: 15px; line-height: 1.95; color: #3A3020; }
+  .ins-single-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #0D1B2E; margin: 36px 0 14px; }
+  .ins-single-body p { margin-bottom: 20px; }
+  .ins-single-body ul, .ins-single-body ol { margin: 0 0 20px 24px; }
+  .ins-single-body li { margin-bottom: 8px; line-height: 1.8; }
+  .ins-single-body strong { font-weight: 700; color: #0D1B2E; }
+  .ins-cta { background: #0D1B2E; padding: 40px 48px; margin-top: 56px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .ins-cta-text h4 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 24px; color: #FAF8F5; margin-bottom: 6px; }
+  .ins-cta-text p { font-size: 13px; color: rgba(250,248,245,0.6); }
+  .ins-cta-btn { padding: 13px 28px; border: 1px solid #C4973A; color: #C4973A; font-family: 'Lato', sans-serif; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; background: none; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+  .ins-cta-btn:hover { background: #C4973A; color: #0D1B2E; }
+  .ins-admin-box { background: #F2EFE9; border: 1px solid rgba(196,151,58,0.25); padding: 40px; margin-bottom: 28px; }
+  .ins-admin-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #0D1B2E; margin-bottom: 20px; }
+  .ins-field-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A7060; margin-bottom: 6px; display: block; }
+  .ins-field-input, .ins-field-select, .ins-field-textarea { width: 100%; padding: 11px 14px; border: 1px solid rgba(196,151,58,0.25); background: #FAF8F5; font-family: 'Lato', sans-serif; font-size: 14px; color: #0D1B2E; outline: none; transition: border-color 0.2s; margin-bottom: 16px; }
+  .ins-field-input:focus, .ins-field-select:focus, .ins-field-textarea:focus { border-color: #C4973A; }
+  .ins-field-textarea { min-height: 260px; resize: vertical; line-height: 1.7; }
+  .ins-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .ins-admin-actions { display: flex; gap: 12px; align-items: center; margin-top: 8px; }
+  .ins-btn-publish { padding: 12px 28px; background: #0D1B2E; color: #FAF8F5; border: 1px solid #0D1B2E; font-family: 'Lato', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
+  .ins-btn-publish:hover { background: #C4973A; border-color: #C4973A; color: #0D1B2E; }
+  .ins-btn-cancel { padding: 10px 20px; background: none; color: #7A7060; border: 1px solid rgba(196,151,58,0.25); font-family: 'Lato', sans-serif; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; }
+  .ins-status { font-size: 12px; color: #7A7060; font-style: italic; }
+  .ins-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .ins-th { text-align: left; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #7A7060; padding: 10px 12px; border-bottom: 1px solid rgba(196,151,58,0.25); }
+  .ins-td { padding: 12px; border-bottom: 1px solid rgba(196,151,58,0.1); font-size: 13px; vertical-align: middle; }
+  .ins-btn-del { padding: 4px 10px; border: 1px solid rgba(192,57,43,0.4); color: #c0392b; background: none; font-size: 10px; cursor: pointer; font-family: 'Lato', sans-serif; }
+  .ins-btn-del:hover { background: #c0392b; color: white; }
+  .ins-login-box { max-width: 380px; margin: 60px auto; background: #F2EFE9; border: 1px solid rgba(196,151,58,0.25); padding: 40px; }
+  .ins-login-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #0D1B2E; margin-bottom: 8px; }
+  .ins-login-sub { font-size: 12px; color: #7A7060; margin-bottom: 20px; }
+  .ins-login-error { color: #c0392b; font-size: 12px; margin-bottom: 12px; min-height: 18px; }
+  @media (max-width: 1024px) { .ins-grid { grid-template-columns: repeat(2, 1fr); } .ins-filter-bar, .ins-body, .ins-single { padding-left: 40px; padding-right: 40px; } }
+  @media (max-width: 768px) { .ins-grid { grid-template-columns: 1fr; } .ins-filter-bar, .ins-body, .ins-single { padding-left: 20px; padding-right: 20px; } .ins-search { width: 100%; margin-left: 0; margin-top: 8px; } .ins-single-title { font-size: 32px; } .ins-cta { flex-direction: column; padding: 32px 24px; } .ins-form-row { grid-template-columns: 1fr; } .ins-admin-box { padding: 24px 20px; } }
+
 </style>
 </head>
 <body>
@@ -2089,6 +2153,7 @@ body {
   <a class="tab-nav-item" id="tab-premium" onclick="showPage('premium')">Premium &amp; Exclusive</a>
   <a class="tab-nav-item" id="tab-consult" onclick="showPage('consult')">Consultation</a>
   <a class="tab-nav-item" id="tab-resources" onclick="showPage('resources')">Resources</a>
+  <a class="tab-nav-item" id="tab-insights" onclick="showPage('insights')">Insights</a>
   <a class="tab-nav-apply" id="tab-apply" onclick="window.open('https://mortgageapp.sunflowerbank.com/homehub/signup/sia.klaibua@sunflowerbank.com?from_mobile_share=true','_blank')">Apply Now</a>
 </nav>
 
@@ -2663,7 +2728,7 @@ body {
 </div>
 
 <script>
-const pages = ['hero','about','states','pathways','premium','consult','apply','resources'];
+const pages = ['hero','about','states','pathways','premium','consult','apply','resources','insights'];
 
 function showPage(id) {
   pages.forEach(p => {
@@ -2686,6 +2751,7 @@ function showPage(id) {
       tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }, 50);
   }
+  if (id === 'insights') { setTimeout(initInsights, 10); }
 }
 
 function sendConsultForm() {
@@ -2797,6 +2863,244 @@ function goToSlide(n){
   _stimer=setInterval(function(){goToSlide((_cur+1)%_total);},5500);
 }
 window.addEventListener('load',initSlideshow);
+
+
+// Test the JS for syntax errors
+var BPOSTS = [];
+var BFILTER = 'all';
+var BSEARCH = '';
+var BVIEW = 'list';
+var BCURRENT = null;
+var BADMIN = false;
+var BPASS = 'Sia2025!';
+
+function initInsights() {
+  try { BPOSTS = JSON.parse(localStorage.getItem('sia_insights') || '[]'); } catch(e) { BPOSTS = []; }
+  renderInsights();
+}
+
+function savePosts() {
+  try { localStorage.setItem('sia_insights', JSON.stringify(BPOSTS)); } catch(e) {}
+}
+
+function setBFilter(f, btn) {
+  BFILTER = f;
+  var btns = document.querySelectorAll('.ins-filter-btn');
+  for (var i = 0; i < btns.length; i++) { btns[i].classList.remove('active'); }
+  if (btn) { btn.classList.add('active'); }
+  if (BVIEW === 'list') { renderInsights(); }
+}
+
+function setBSearch(q) {
+  BSEARCH = q;
+  if (BVIEW === 'list') { renderInsights(); }
+}
+
+function renderInsights() {
+  var app = document.getElementById('insightsApp');
+  if (!app) { return; }
+  if (BVIEW === 'single') { renderSingle(); return; }
+  if (BVIEW === 'admin') { renderAdmin(); return; }
+  if (BVIEW === 'login') { renderLogin(); return; }
+  renderList();
+}
+
+function renderList() {
+  var app = document.getElementById('insightsApp');
+  var filtered = [];
+  for (var i = 0; i < BPOSTS.length; i++) {
+    var p = BPOSTS[i];
+    var matchCat = (BFILTER === 'all' || p.category === BFILTER);
+    var q = BSEARCH.toLowerCase();
+    var matchQ = (!q || (p.title || '').toLowerCase().indexOf(q) > -1 || (p.excerpt || '').toLowerCase().indexOf(q) > -1);
+    if (matchCat && matchQ) { filtered.push(p); }
+  }
+  if (filtered.length === 0) {
+    app.innerHTML = '<div class="ins-empty"><h3>' + (BPOSTS.length === 0 ? 'No posts yet.' : 'No posts match your search.') + '</h3><p>New Arizona mortgage insights published daily. Check back soon.</p></div>';
+    return;
+  }
+  var html = '<div class="ins-grid">';
+  for (var j = 0; j < filtered.length; j++) { html += makeCard(filtered[j]); }
+  html += '</div>';
+  app.innerHTML = html;
+}
+
+function makeCard(p) {
+  var catLabel = { tips: 'Mortgage Tips', market: 'Market Update', firsttime: 'First-Time Buyers' };
+  var catClass = { tips: 'ins-badge-tips', market: 'ins-badge-market', firsttime: 'ins-badge-firsttime' };
+  var icon = { tips: '&#x1F4A1;', market: '&#x1F4C8;', firsttime: '&#x1F3E0;' };
+  var date = p.createdAt ? new Date(p.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '';
+  var badge = catClass[p.category] || 'ins-badge-tips';
+  var label = catLabel[p.category] || 'Mortgage Tips';
+  var ico = icon[p.category] || '&#x1F4A1;';
+  return '<div class="ins-card" onclick="openPost(\'' + p.id + '\')">' +
+    '<div class="ins-card-top"><span class="ins-badge ' + badge + '">' + label + '</span>' +
+    '<div class="ins-card-icon">' + ico + '</div></div>' +
+    '<div class="ins-card-body"><div class="ins-card-date">' + date + '</div>' +
+    '<h3 class="ins-card-title">' + bEsc(p.title) + '</h3>' +
+    '<p class="ins-card-excerpt">' + bEsc(p.excerpt || '') + '</p>' +
+    '<div class="ins-card-read">Read Article &rarr;</div></div></div>';
+}
+
+function openPost(id) {
+  for (var i = 0; i < BPOSTS.length; i++) {
+    if (BPOSTS[i].id === id) { BCURRENT = BPOSTS[i]; break; }
+  }
+  if (!BCURRENT) { return; }
+  BVIEW = 'single';
+  var fb = document.getElementById('insightsFilterBar');
+  if (fb) { fb.style.display = 'none'; }
+  renderInsights();
+}
+
+function renderSingle() {
+  var p = BCURRENT;
+  var catLabel = { tips: 'Mortgage Tips', market: 'Market Update', firsttime: 'First-Time Buyers' };
+  var catClass = { tips: 'ins-badge-tips', market: 'ins-badge-market', firsttime: 'ins-badge-firsttime' };
+  var date = p.createdAt ? new Date(p.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '';
+  var app = document.getElementById('insightsApp');
+  app.innerHTML = '<div class="ins-single">' +
+    '<button class="ins-back" onclick="closePost()">&larr; Back to Insights</button>' +
+    '<span class="ins-badge ' + (catClass[p.category] || 'ins-badge-tips') + '" style="margin-bottom:18px;display:inline-block;">' + (catLabel[p.category] || 'Mortgage Tips') + '</span>' +
+    '<h1 class="ins-single-title">' + bEsc(p.title) + '</h1>' +
+    '<div class="ins-single-meta">By Sia Klaibua &middot; Mortgage Loan Originator &middot; ' + date + ' &middot; NMLS# 2823225</div>' +
+    '<div class="ins-single-body">' + (p.content || '') + '</div>' +
+    '<div class="ins-cta">' +
+    '<div class="ins-cta-text"><h4>Ready to take the next step?</h4><p>I am here to guide you through your Arizona mortgage journey with clarity and confidence.</p></div>' +
+    '<button class="ins-cta-btn" onclick="showPage(\'consult\')">Schedule a Consultation &rarr;</button>' +
+    '</div></div>';
+}
+
+function closePost() {
+  BVIEW = 'list';
+  BCURRENT = null;
+  var fb = document.getElementById('insightsFilterBar');
+  if (fb) { fb.style.display = ''; }
+  renderInsights();
+}
+
+function showInsightsAdmin() {
+  if (BADMIN) { BVIEW = 'admin'; renderInsights(); return; }
+  BVIEW = 'login';
+  renderInsights();
+}
+
+function renderLogin() {
+  var app = document.getElementById('insightsApp');
+  app.innerHTML = '<div class="ins-login-box">' +
+    '<div class="ins-login-title">Admin Access</div>' +
+    '<div class="ins-login-sub">Enter your password to manage posts.</div>' +
+    '<label class="ins-field-label">Password</label>' +
+    '<input class="ins-field-input" type="password" id="insPwd" placeholder="Enter password">' +
+    '<div class="ins-login-error" id="insLoginErr"></div>' +
+    '<div style="margin-top:20px;">' +
+    '<button class="ins-btn-publish" onclick="checkLogin()">Log In</button>' +
+    '<button class="ins-btn-cancel" onclick="closePost()" style="margin-left:12px;">Cancel</button>' +
+    '</div></div>';
+  setTimeout(function() { var el = document.getElementById('insPwd'); if (el) { el.focus(); } }, 100);
+}
+
+function checkLogin() {
+  var el = document.getElementById('insPwd');
+  var err = document.getElementById('insLoginErr');
+  if (el && el.value === BPASS) {
+    BADMIN = true;
+    BVIEW = 'admin';
+    renderInsights();
+  } else {
+    if (err) { err.textContent = 'Incorrect password. Please try again.'; }
+  }
+}
+
+function renderAdmin() {
+  var app = document.getElementById('insightsApp');
+  var cats = { tips: 'Mortgage Tips', market: 'Market Update', firsttime: 'First-Time Buyers' };
+  var rows = '';
+  for (var i = 0; i < BPOSTS.length; i++) {
+    var p = BPOSTS[i];
+    var date = p.createdAt ? new Date(p.createdAt).toLocaleDateString() : '';
+    rows += '<tr>' +
+      '<td class="ins-td">' + bEsc(p.title) + '</td>' +
+      '<td class="ins-td">' + (cats[p.category] || p.category) + '</td>' +
+      '<td class="ins-td">' + date + '</td>' +
+      '<td class="ins-td"><button class="ins-btn-del" onclick="deletePost(\'' + p.id + '\')">Delete</button></td>' +
+      '</tr>';
+  }
+  var tableSection = '';
+  if (BPOSTS.length > 0) {
+    tableSection = '<div class="ins-admin-box" style="margin-top:28px;">' +
+      '<div class="ins-admin-title">Published Posts (' + BPOSTS.length + ')</div>' +
+      '<table class="ins-table">' +
+      '<thead><tr><th class="ins-th">Title</th><th class="ins-th">Category</th><th class="ins-th">Date</th><th class="ins-th">Action</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody></table></div>';
+  }
+  app.innerHTML = '<div class="ins-admin-box">' +
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">' +
+    '<div class="ins-admin-title">Write a New Post</div>' +
+    '<button class="ins-btn-cancel" onclick="closePost()">View Insights</button></div>' +
+    '<div class="ins-form-row">' +
+    '<div><label class="ins-field-label">Post Title</label>' +
+    '<input class="ins-field-input" id="insTitle" placeholder="e.g. Why Scottsdale Home Prices Are Rising in 2025"></div>' +
+    '<div><label class="ins-field-label">Category</label>' +
+    '<select class="ins-field-select" id="insCat">' +
+    '<option value="tips">Mortgage Tips</option>' +
+    '<option value="market">Market Update</option>' +
+    '<option value="firsttime">First-Time Buyers</option>' +
+    '</select></div></div>' +
+    '<label class="ins-field-label">Short Excerpt (1-2 sentences shown on listing)</label>' +
+    '<input class="ins-field-input" id="insExcerpt" placeholder="A brief summary of this post...">' +
+    '<label class="ins-field-label">Post Content (HTML supported: use p, h2, ul, li, strong)</label>' +
+    '<textarea class="ins-field-textarea" id="insContent" placeholder="Write your post here..."></textarea>' +
+    '<div class="ins-admin-actions">' +
+    '<button class="ins-btn-publish" onclick="publishPost()">Publish Post</button>' +
+    '<span class="ins-status" id="insStatus"></span></div></div>' +
+    tableSection;
+}
+
+function publishPost() {
+  var titleEl = document.getElementById('insTitle');
+  var catEl = document.getElementById('insCat');
+  var excerptEl = document.getElementById('insExcerpt');
+  var contentEl = document.getElementById('insContent');
+  var title = titleEl ? titleEl.value.trim() : '';
+  var cat = catEl ? catEl.value : 'tips';
+  var excerpt = excerptEl ? excerptEl.value.trim() : '';
+  var content = contentEl ? contentEl.value.trim() : '';
+  if (!title || !excerpt || !content) { setStatus('Please fill in all fields before publishing.'); return; }
+  var id = 'post_' + Date.now();
+  BPOSTS.unshift({ id: id, title: title, category: cat, excerpt: excerpt, content: content, createdAt: Date.now(), author: 'Sia Klaibua' });
+  savePosts();
+  setStatus('Post published successfully!');
+  if (titleEl) { titleEl.value = ''; }
+  if (excerptEl) { excerptEl.value = ''; }
+  if (contentEl) { contentEl.value = ''; }
+  setTimeout(function() { renderAdmin(); }, 1000);
+}
+
+function deletePost(id) {
+  if (!confirm('Delete this post? This cannot be undone.')) { return; }
+  var newPosts = [];
+  for (var i = 0; i < BPOSTS.length; i++) {
+    if (BPOSTS[i].id !== id) { newPosts.push(BPOSTS[i]); }
+  }
+  BPOSTS = newPosts;
+  savePosts();
+  renderAdmin();
+}
+
+function setStatus(msg) {
+  var el = document.getElementById('insStatus');
+  if (el) { el.textContent = msg; }
+}
+
+function bEsc(str) {
+  var s = String(str || '');
+  s = s.replace(/&/g, '&amp;');
+  s = s.replace(/</g, '&lt;');
+  s = s.replace(/>/g, '&gt;');
+  s = s.replace(/"/g, '&quot;');
+  return s;
+}
 
 </script>
 
@@ -3148,6 +3452,26 @@ window.addEventListener('load',initSlideshow);
   <footer class="site-footer">
     <div class="footer-brand">Sia Klaibua · Sunflower Bank</div>
     <div class="footer-legal">NMLS #2823225 · Equal Housing Lender · Scottsdale, AZ<br>Sunflower Bank NMLS #709491 · Member FDIC<br>© 2025 Sia Klaibua. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- INSIGHTS PAGE -->
+<div id="page-insights" class="page">
+  <div class="ins-filter-bar" id="insightsFilterBar">
+    <button class="ins-filter-btn active" onclick="setBFilter('all',this)">All</button>
+    <button class="ins-filter-btn" onclick="setBFilter('tips',this)">Mortgage Tips</button>
+    <button class="ins-filter-btn" onclick="setBFilter('market',this)">Market Updates</button>
+    <button class="ins-filter-btn" onclick="setBFilter('firsttime',this)">First-Time Buyers</button>
+    <button class="ins-filter-btn" onclick="showInsightsAdmin()" style="margin-left:auto;">Admin</button>
+    <input class="ins-search" type="text" placeholder="Search insights..." oninput="setBSearch(this.value)">
+  </div>
+  <div id="insightsApp" class="ins-body">
+    <div class="ins-empty"><h3>Loading...</h3></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-brand">Sia Klaibua &middot; Sunflower Bank</div>
+    <div class="footer-legal">NMLS #2823225 &middot; Equal Housing Lender &middot; Scottsdale, AZ<br>Sunflower Bank NMLS #709491 &middot; Member FDIC<br>&copy; 2025 Sia Klaibua. All rights reserved.</div>
   </footer>
 </div>
 
