@@ -904,6 +904,26 @@ body {
 /* ══════════════════════════════════════
    PREMIUM & EXCLUSIVE PAGE
 ══════════════════════════════════════ */
+/* ══ OPEN HOUSES PAGE ══ */
+.oh-body { padding: 72px; }
+.oh-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+.oh-card { background: #fff; border: 1px solid rgba(13,27,46,0.10); display: flex; flex-direction: column; color: var(--navy); text-decoration: none; transition: transform .25s ease, box-shadow .25s ease; }
+.oh-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(13,27,46,0.12); }
+.oh-photo { aspect-ratio: 4 / 3; background: var(--navy-mid) center/cover no-repeat; position: relative; }
+.oh-date { position: absolute; left: 16px; bottom: 16px; background: var(--navy); color: var(--warm-white); padding: 8px 14px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; }
+.oh-date b { color: var(--gold); font-weight: 400; }
+.oh-info { padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.oh-price { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 400; }
+.oh-addr { font-family: 'Cormorant Garamond', serif; font-size: 22px; line-height: 1.2; }
+.oh-city { font-size: 13px; color: #666; }
+.oh-facts { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #555; margin-top: 8px; }
+.oh-host { font-size: 13px; color: #555; margin-top: 4px; }
+.oh-cta { margin-top: auto; padding-top: 18px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); }
+.oh-empty { grid-column: 1 / -1; border: 1px dashed rgba(13,27,46,0.25); padding: 40px; text-align: center; color: #555; font-size: 15px; }
+.oh-past-label { grid-column: 1 / -1; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-top: 24px; }
+@media (max-width: 768px) { .oh-body { padding: 40px 20px; } .oh-grid { grid-template-columns: 1fr; } }
+@media (min-width: 1025px) and (max-width: 1440px) { .tab-nav-item { padding: 0 10px; letter-spacing: 0.14em; } }
+
 .premium-header {
   background: var(--navy);
   padding: 80px 72px 64px;
@@ -2492,6 +2512,7 @@ body {
   <a class="tab-nav-item" id="tab-states" onclick="showPage('states')">Licensed in 43 States</a>
   <a class="tab-nav-item" id="tab-pathways" onclick="showPage('pathways')">Pathways to Homeownership</a>
   <a class="tab-nav-item" id="tab-premium" onclick="showPage('premium')">Premium &amp; Exclusive</a>
+  <a class="tab-nav-item" id="tab-openhouses" onclick="showPage('openhouses')">Open Houses</a>
   <a class="tab-nav-item" id="tab-consult" onclick="showPage('consult')">Consultation</a>
   <a class="tab-nav-item" id="tab-resources" onclick="showPage('resources')">Resources</a>
   <a class="tab-nav-item" id="tab-insights" onclick="showPage('insights')">Insights</a>
@@ -2950,6 +2971,22 @@ body {
 <!-- ══════════════════════════════════
      CONSULTATION
 ══════════════════════════════════ -->
+<!-- ══ OPEN HOUSES ══ -->
+<div id="page-openhouses" class="page page-section">
+  <div class="premium-header">
+    <p class="premium-eyebrow">Featured Open Houses</p>
+    <h2 class="premium-heading">Homes I am proud<br>to help <em>present.</em></h2>
+  </div>
+  <div class="oh-body">
+    <p class="premium-intro">Visit an upcoming open house, explore each home's financing options, and see what your monthly payment could look like. For a personalized quote, schedule a consultation.</p>
+    <div id="ohApp" class="oh-grid"><div class="oh-empty">Loading open houses…</div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-brand">Sia Klaibua &middot; Sunflower Bank</div>
+    <div class="footer-legal">NMLS #2823225 &middot; Equal Housing Lender &middot; Scottsdale, AZ<br>Sunflower Bank NMLS #709491 &middot; Member FDIC<br>&copy; 2025 Sia Klaibua. All rights reserved.</div>
+  </footer>
+</div>
+
 <div id="page-consult" class="page page-section">
   <div class="consult-layout">
     <div class="consult-left">
@@ -3069,7 +3106,34 @@ body {
 </div>
 
 <script>
-const pages = ['hero','about','states','pathways','premium','consult','apply','resources','insights'];
+const pages = ['hero','about','states','pathways','premium','openhouses','consult','apply','resources','insights'];
+
+function initOpenHouses() {
+  var app = document.getElementById('ohApp');
+  if (!app || app.getAttribute('data-loaded') === '1') return;
+  function esc(t) { return String(t == null ? '' : t).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function card(h) {
+    var price = h.price ? '$' + Number(h.price).toLocaleString('en-US') : '';
+    var facts = [h.beds ? h.beds + ' Beds' : '', h.baths ? h.baths + ' Baths' : '', h.sqft ? Number(h.sqft).toLocaleString('en-US') + ' Sq Ft' : ''].filter(Boolean).join(' &middot; ');
+    var date = h.ohDate ? '<div class="oh-date"><b>Open House</b> &middot; ' + esc(h.ohDate) + (h.ohTime ? ' &middot; ' + esc(h.ohTime) : '') + '</div>' : '';
+    return '<a class="oh-card" href="' + esc(h.url) + '">' +
+      '<div class="oh-photo"' + (h.cover ? ' style="background-image:url(' + "'" + esc(h.cover) + "'" + ')"' : '') + '>' + date + '</div>' +
+      '<div class="oh-info"><div class="oh-price">' + price + '</div><div class="oh-addr">' + esc(h.address) + '</div><div class="oh-city">' + esc(h.city) + '</div>' +
+      (facts ? '<div class="oh-facts">' + facts + '</div>' : '') +
+      (h.host ? '<div class="oh-host">' + esc(h.hostLabel || 'Hosted by') + ' ' + esc(h.host) + (h.brokerage ? ', ' + esc(h.brokerage) : '') + '</div>' : '') +
+      '<div class="oh-cta">View this home &rarr;</div></div></a>';
+  }
+  fetch('/listings/open-houses.json', { cache: 'no-store' })
+    .then(function(r){ if (!r.ok) throw new Error('missing'); return r.json(); })
+    .then(function(data){
+      var list = (data && data.homes) || [];
+      var cur = list.filter(function(h){ return !h.past; }), past = list.filter(function(h){ return h.past; });
+      var html = cur.length ? cur.map(card).join('') : '<div class="oh-empty">No open houses are scheduled right now. Check back soon, or schedule a consultation to talk about your home search.</div>';
+      if (past.length) html += '<div class="oh-past-label">Recently Featured</div>' + past.map(card).join('');
+      app.innerHTML = html; app.setAttribute('data-loaded', '1');
+    })
+    .catch(function(){ app.innerHTML = '<div class="oh-empty">No open houses are scheduled right now. Check back soon, or schedule a consultation to talk about your home search.</div>'; });
+}
 
 function showPage(id) {
   pages.forEach(p => {
@@ -3093,6 +3157,7 @@ function showPage(id) {
     }, 50);
   }
   if (id === 'insights') { setTimeout(initInsights, 10); }
+  if (id === 'openhouses') { setTimeout(initOpenHouses, 10); }
 }
 
 function sendConsultForm() {
